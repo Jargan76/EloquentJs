@@ -1,0 +1,51 @@
+var bob = {
+    firstName: "Bob",
+    lastName: "Hebel",
+    phoneNumber: "(650) 777-7777",
+    email: "bob.H@example.com"
+};
+
+var mary = {
+    firstName: "Mary",
+    lastName: "Mitchel",
+    phoneNumber: "(650) 888-8888",
+    email: "mary.mitch@example.com"
+};
+
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+};
+
+function list() {
+	var contactsLength = contacts.length;
+	for (var i = 0; i < contactsLength; i++) {
+		printPerson(contacts[i]);
+	}
+};
+// add new contacts to the contacts var
+function addContact(firstName, lastName, phoneNumber, email) {
+        contacts[contacts.length] = {
+            firstName: firstName,
+            lastName: lastName,
+            phoneNumber: phoneNumber,
+            email: email
+        };
+}
+
+
+//search by last name.. 
+function search(lastName) {
+    var contactLength = contacts.length;
+    for (var i = 0; i < contactLength; i++){
+        if(contacts[i].lastName === lastName){
+            console.log(printPerson(contacts[i]));            
+        } 
+    }
+};
+
+addContact('Eric', 'Hebel', '954-555-5555', 'email@that.not');
+addContact('Mia','Hebel','954-552-2222','mia.H@ohmail.com');
+addContact('Q','bert','123-456-7891','atari@oldSchool.net');
+list();
