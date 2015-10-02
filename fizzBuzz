@@ -1,6 +1,5 @@
 // made into a function so that you can use any number.
-function fizzBuzz(num){ 
-  	this.num = num;
+function fizzBuzz(num){
     // this is my for loop that counts to num
     for (var i = 1; i < num; i++)
       // if i is divisable by 15 then it turns to FizzBuzz
@@ -12,8 +11,8 @@ function fizzBuzz(num){
       // if i is divisable by 3 then it turns to Fizz
       else if(i % 3 === 0)
         console.log("Fizz");
-      // if i is any other number then print that number 
+      // if i is any other number then print that number
       else
         console.log(i);
 }
-fizzBuzz(16);  
+fizzBuzz(16) 
