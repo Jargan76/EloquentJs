@@ -1,0 +1,8 @@
+// Your code here.
+var min = function(first, second){
+	return Math.min(first, second);
+}
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
