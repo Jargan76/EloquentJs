@@ -1,0 +1,21 @@
+// of course made into a function
+function checkBoard(set){
+  // like on the first 2 the this.bla.bla is checkBoard.set think child of
+  this.set = set;
+  // basic for loop counts width
+  for(var i = 0; i < set; i++){
+    // this is my counter it is set to blank
+  	var counter = '';
+    // basic for loop counts the height
+    for(var j = 0; j < set; j++){
+      // this makes the pattern by starting the line with space or hash
+    	if((i+j)%2 === 0){
+        	counter += ' ';
+        }else{
+        	counter += '#';
+        }
+    } 
+    console.log(counter);
+  }}
+
+checkBoard(30);      
