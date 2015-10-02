@@ -1,7 +1,11 @@
+// made into a function so you can make as big or small
 function triangle(num){
   this.num = num
-  var counter = "";
+  // this is the tracking var or counter
+  var counter = "";//started it with blank.
+  	//basic for loop
 	for (var i = 0; i < num; i++){
+    // counter adds itself to it's pervious self "stacks each row"  
     counter += '#';
     console.log(counter);
 }};
