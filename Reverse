@@ -1,0 +1,27 @@
+function reverseArray(array){
+// temp is my holder array
+	var temp = [];
+	// using for loop to go through the array items then push them to temp
+  	for(var i = array.length - 1; i >= 0; i--)
+      temp.push(array[i]);
+    return temp;
+}
+
+function reverseArrayInPlace(array) {
+// took me awhile to figure this one out.. lol
+  for (var i = 0; i < Math.floor(array.length / 2); i++) 
+  
+    var first = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = first;
+  }
+  return array;
+}
+var sampleArray = ["A","B","C"];
+var arrayValue = [1, 2, 3, 4, 5];
+
+console.log(sampleArray);
+console.log(reverseArray(sampleArray));
+console.log(arrayValue);
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
