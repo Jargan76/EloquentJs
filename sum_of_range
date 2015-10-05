@@ -1,27 +1,26 @@
-// Your code here.
+   // Your code here.
+   //  returns a range of numbers from start/1st number to end/last number. step is used to know what incraments to coun
 function range(start, end, step){
-  	var arr = [];
-  	if (step == null)
+   // blank array
+    var arr = [];
+   // if step is left blank it will default to nothing/null.
+	if (step == null)
       step = 1;
-  
-  	if (step > 0)
-    	for (var i = start; i <= end; i += step)
-        	arr.push(i);        
-    else
-      	for (var i = start; i >= end; i += step)
-        	arr.push(i);     
-	
+   // needed to have 2 diff. top is for Pos numbers and bottom is for Neg numbers
+	if (step > 0)
+		for (var i = start; i <= end; i += step)
+			arr.push(i);
+	else
+		for (var i = start; i >= end; i += step)
+			arr.push(i);
 	return arr;
 }
-
+   // this is the total sum of all the numbers in the array
 function sum(arr){
-  
 	var tSum = 0;
-  
-  	for (var i = 0; i < arr.length; i++)
-    	tSum += arr[i];
-      return tSum;
-    
+	for (var i = 0; i < arr.length; i++)
+		tSum += arr[i];
+	return tSum;
 }
 console.log(sum(range(2, 8)));
 console.log(sum(range(1, 10)));
